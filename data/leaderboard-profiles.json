@@ -1,0 +1,10 @@
+[
+  {
+    "id": "example-1",
+    "summonerName": "Faker",
+    "region": "kr",
+    "notes": "Lenda do League of Legends",
+    "featured": true
+  }
+]
+

@@ -1,0 +1,186 @@
+.card {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 107, 53, 0.2);
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-orange);
+  box-shadow: 0 0 20px var(--glow-orange);
+}
+
+.levelBadge {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.9rem;
+  border: 3px solid var(--bg-primary);
+  box-shadow: 0 0 10px var(--glow-orange);
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.summonerName {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.summonerLevel {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.statsGrid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 12px;
+  min-width: 120px;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent-orange);
+  margin-bottom: 0.25rem;
+}
+
+.statSubtext {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.rankedSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.rankedCard {
+  padding: 1.5rem;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.rankedCard:hover {
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
+}
+
+.rankedLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.rankedTier {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.rankedDetails {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.unranked {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.hotStreak {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid var(--accent-yellow);
+  border-radius: 8px;
+  color: var(--accent-yellow);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .statsGrid {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .rankedSection {
+    grid-template-columns: 1fr;
+  }
+}
+
